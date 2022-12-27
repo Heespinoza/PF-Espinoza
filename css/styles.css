@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+h1 {
+  font-style: italic;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 5000;
+  font-size: 80;
+  text-align: center;
+  color: #d3d2cf; }
+
+p {
+  color: black; }
+
+#p2 {
+  color: white; }
+
+#divblog {
+  display: flex;
+  align-items: center;
+  justify-content: center !important; }
+
+h5 {
+  color: black; }
+
+.parrafo {
+  color: white;
+  padding-left: 20%;
+  padding-right: 20%; }
+
+.textoespecial {
+  color: aquamarine; }
+
+#contacto {
+  display: flexbox;
+  align-items: center;
+  justify-content: space-between; }
+
+.card:hover, .card:focus-within {
+  transform: scale(1.05); }
+
+section:hover img {
+  filter: blur(1px) grayscale(100%); }
+
+img {
+  transition: all 2s; }
+
+section img:hover {
+  filter: initial;
+  cursor: pointer; }
