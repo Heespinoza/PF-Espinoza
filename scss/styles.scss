@@ -1,16 +1,11 @@
-@import "variables";
-@import "reset";
+@import "./variables";
+@import "./reset";
+@import "./main.scss";
 
 
 
-h1{
-    font-style: $stilo-h1;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 5000;
-    font-size: 80;
-    text-align: center;
-    color: $color-h1;
-}
+
+
 p{
     color: black;
 }
@@ -26,15 +21,8 @@ p{
 h5{
     color: black;
 }
-.parrafo{
-    color: $color-letraparrafo;
 
-    padding-left: 20%;
-    padding-right: 20%;
-}
-.textoespecial{
-    color: $color-letraespcial;
-}
+
 #contacto{
     display: flexbox;
     align-items: center;
