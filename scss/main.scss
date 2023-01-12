@@ -6,11 +6,13 @@ main{
         font-size: 80;
         text-align: center;
         color: $color-h1;
+        -webkit-animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both;animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both
+        
         
     }
     .parrafo{
         color: $color-letraparrafo;
-    
+        font-size: larger;
         padding-left: 20%;
         padding-right: 20%;
     }
@@ -19,3 +21,29 @@ main{
         ;
     }
 }
+p{
+    color: black;
+    
+}
+#p2{
+    color:$color-letraparrafo;
+}
+#divblog{
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    
+}
+h5{
+    color: black;
+}
+
+
+#contacto{
+    display: flexbox;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+@-webkit-keyframes text-focus-in{0%{-webkit-filter:blur(12px);filter:blur(12px);opacity:0}100%{-webkit-filter:blur(0);filter:blur(0);opacity:1}}@keyframes text-focus-in{0%{-webkit-filter:blur(12px);filter:blur(12px);opacity:0}100%{-webkit-filter:blur(0);filter:blur(0);opacity:1}}

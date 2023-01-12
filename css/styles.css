@@ -11,10 +11,13 @@ main h1 {
   font-weight: 5000;
   font-size: 80;
   text-align: center;
-  color: #d3d2cf; }
+  color: #d3d2cf;
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; }
 
 main .parrafo {
   color: white;
+  font-size: larger;
   padding-left: 20%;
   padding-right: 20%; }
 
@@ -30,7 +33,7 @@ p {
 #divblog {
   display: flex;
   align-items: center;
-  justify-content: center !important; }
+  justify-content: center; }
 
 h5 {
   color: black; }
@@ -40,15 +43,67 @@ h5 {
   align-items: center;
   justify-content: space-between; }
 
-.card:hover, .card:focus-within {
-  transform: scale(1.05); }
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0; }
+  100% {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1; } }
 
-section:hover img {
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0; }
+  100% {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1; } }
+
+.card:hover {
+  transform: scale(1.05) translateY(10px); }
+
+.gal:hover img {
   filter: blur(1px) grayscale(100%); }
 
-img {
-  transition: all 2s; }
+.card {
+  transition: transform 1s; }
 
-section img:hover {
+.gal img:hover {
   filter: initial;
   cursor: pointer; }
+
+.slide-in-elliptic-left-fwd {
+  -webkit-animation: slide-in-elliptic-left-fwd 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-elliptic-left-fwd 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+
+@-webkit-keyframes slide-in-elliptic-left-fwd {
+  0% {
+    -webkit-transform: translateX(-800px) rotateY(30deg) scale(0);
+    transform: translateX(-800px) rotateY(30deg) scale(0);
+    -webkit-transform-origin: -100% 50%;
+    transform-origin: -100% 50%;
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateX(0) rotateY(0) scale(1);
+    transform: translateX(0) rotateY(0) scale(1);
+    -webkit-transform-origin: 1800px 50%;
+    transform-origin: 1800px 50%;
+    opacity: 1; } }
+
+@keyframes slide-in-elliptic-left-fwd {
+  0% {
+    -webkit-transform: translateX(-800px) rotateY(30deg) scale(0);
+    transform: translateX(-800px) rotateY(30deg) scale(0);
+    -webkit-transform-origin: -100% 50%;
+    transform-origin: -100% 50%;
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateX(0) rotateY(0) scale(1);
+    transform: translateX(0) rotateY(0) scale(1);
+    -webkit-transform-origin: 1800px 50%;
+    transform-origin: 1800px 50%;
+    opacity: 1; } }
